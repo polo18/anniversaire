@@ -1,44 +1,71 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Joyeux Anniversaire 🎉</title>
-        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pour Ania 🌷</title>
+
+        <!-- POLICES DOUCES -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&display=swap"
+            rel="stylesheet">
+
+        <link href="style.css" rel="stylesheet">
     </head>
+
     <body>
 
-        <!-- PAGE 1 : Touche le cadeau -->
-        <div id="touch">
-            <p class="soft-text">Un message spécial pour toi 📚🔬</p>
-            <div class="tap">🎁</div>
-            <span class="tap-text">Touche ici</span>
+        <!-- PAGE 1 -->
+        <div class="screen" id="screen1">
+            <div class="touch-box">
+                <p>Un message doux, rien que pour toi Ania 🤍</p>
+                <div class="gift" id="open">🌸</div>
+                <div class="tap">Touche ici</div>
+            </div>
         </div>
 
-        <!-- PAGE 2 : Surprise -->
-        <div id="surprise" class="hidden">
-            <h1 class="title animate-pop">Joyeux Anniversaire Ania 🎉</h1>
+        <!-- PAGE 2 -->
+        <div class="screen hidden" id="screen2">
+            <div class="card">
+                <h1>Joyeux Anniversaire 🌷</h1>
+                <h2>Pour Ania</h2>
 
-            <h2 class="subtitle animate-slide">Pour une passionnée d’histoire et
-                de science 🏛️🔬</h2>
+                <div class="message">
+                    En ce jour lumineux,
+                    je te souhaite un cœur rempli de joie,
+                    une âme portée par une belle énergie
+                    et des couleurs d’espoir 🤍<br><br>
 
-            <p class="message animate-fade">
-                En ce jour spécial, je te souhaite
-                une année pleine de découvertes fascinantes,
-                de lectures captivantes et de voyages inspirants 🌌
+                    Malgré tout ce que tu as traversé,
+                    tu gardes en toi une force précieuse,
+                    un cœur capable d’aimer,
+                    de se relever et de sourire à nouveau 🌸✨<br><br>
 
-                Que ta curiosité et ta passion
-                t’emmènent vers de nouveaux horizons 📚🏺
-            </p>
+                    Que cette nouvelle année soit
+                    un nouveau départ,
+                    fait de petits bonheurs quotidiens,
+                    de rêves qui renaissent
+                    et de lumière dans chacun de tes pas 🌷<br><br>
 
-            <div id="date" class="date"></div>
+                    Avance avec confiance,
+                    ouvre ton cœur à la vie,
+                    et laisse le bonheur te rejoindre,
+                    car tu mérites tout ce qu’il y a de beau 💖
+                </div>
 
-            <div class="pulse-icon">🔬</div>
+                <div class="date" id="date"></div>
+                <div class="symbol">🕊️</div>
+            </div>
         </div>
 
-        <audio id="music" src="birthday-2.mp3"></audio>
+        <!-- MUSIQUE (optionnelle) -->
+        <audio id="music" loop>
+            <source src="birthday-2.mp3" type="audio/mpeg">
+        </audio>
+
         <canvas id="confetti"></canvas>
 
         <script src="script.js"></script>
+
     </body>
 </html>

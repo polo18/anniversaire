@@ -1,146 +1,122 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: "Georgia", serif;
-  background: linear-gradient(180deg, #1c1c3c, #f0e6d2);
-  background-size: cover;
-  color: #fff;
-  text-align: center;
+  height: 100vh;
+  background: linear-gradient(180deg, #f1f5f4, #ddeae6);
+  font-family: 'Inter', sans-serif;
+  color: #2f3e46;
   overflow: hidden;
 }
 
-/* GENERAL */
+.screen {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+}
+
 .hidden {
   display: none;
 }
 
-#touch,
-#surprise {
-  height: 100vh;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+/* PAGE 1 */
+.touch-box {
+  max-width: 340px;
 }
 
-.soft-text {
-  font-size: 18px;
-  margin-bottom: 20px;
-  color: #e0d7c6;
-}
-
-/* TAP */
-.tap {
-  font-size: 90px;
-  cursor: pointer;
-  animation: pulse 1.4s infinite;
-}
-
-.tap-text {
-  margin-top: 10px;
+.touch-box p {
   font-size: 16px;
-  color: #e0d7c6;
+  margin-bottom: 24px;
+  color: #5a6f73;
 }
 
-/* TEXTES */
-.title {
-  font-size: 38px;
-  margin-bottom: 10px;
-  text-shadow:
-    0 0 10px #ffd700,
-    0 0 20px #fffacd;
+.gift {
+  font-size: 78px;
+  cursor: pointer;
+  animation: pulse 1.6s infinite;
 }
 
-.subtitle {
-  font-size: 22px;
+.tap {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #6c8f92;
+}
+
+/* PAGE 2 */
+.card {
+  max-width: 360px;
+  animation: fadeIn 1.6s ease forwards;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #52796f;
   margin-bottom: 20px;
 }
 
 .message {
-  font-size: 17px;
-  line-height: 1.7;
-  max-width: 340px;
-  color: #f5f1e3;
-}
-
-/* DATE */
-.date {
-  margin-top: 15px;
   font-size: 16px;
-  color: #ffd700;
+  line-height: 1.85;
+  color: #344e41;
+  margin-bottom: 22px;
 }
 
-/* ICÔNES */
-.pulse-icon {
-  font-size: 50px;
-  margin-top: 20px;
-  animation: pulse 1.4s infinite;
+.date {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 18px;
 }
 
+.symbol {
+  font-size: 40px;
+  animation: pulse 1.8s infinite;
+}
+
+/* ICÔNES FLOTTANTES */
 .icon {
   position: absolute;
   top: -40px;
-  font-size: 28px;
-  animation: fall 8s linear;
+  font-size: 22px;
+  opacity: 0.6;
+  animation: fall linear forwards;
 }
 
 /* ANIMATIONS */
-.animate-pop {
-  animation: pop 0.8s ease forwards;
-}
-.animate-slide {
-  animation: slide 1s ease forwards;
-}
-.animate-fade {
-  animation: fade 1.5s ease forwards;
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
 }
 
-@keyframes pop {
-  from {
-    transform: scale(0.7);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
 }
-@keyframes slide {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.15);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
+
 @keyframes fall {
   to {
     transform: translateY(120vh);
     opacity: 0;
   }
+}
+
+/* CONFETTIS */
+canvas {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
 }
