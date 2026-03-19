@@ -1,71 +1,70 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Pour Ania 🌷</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eid Mubarak - Mouloud Zidane</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <canvas id="stars"></canvas>
 
-        <!-- POLICES DOUCES -->
-        <link
-            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&display=swap"
-            rel="stylesheet">
+    <div class="screen" id="screen1">
+      <div class="intro-shell">
+        <div class="lantern lantern-left"></div>
+        <div class="lantern lantern-right"></div>
 
-        <link href="style.css" rel="stylesheet">
-    </head>
+        <div class="touch-box">
+          <p class="eyebrow">A l'occasion de l'Aid el-Fitr, Clique ICI</p>
+          <div class="moon-mark" id="open" aria-label="Ouvrir la carte" role="button" tabindex="0">
+            &#9789;
+          </div>
+          <h1>Eid Mubarak</h1>
+          <p class="lead">By Mouloud ZIDANE.</p>
+          <div class="tap">Touchez le croissant de lune</div>
+        </div>
+      </div>
+    </div>
 
-    <body>
-
-        <!-- PAGE 1 -->
-        <div class="screen" id="screen1">
-            <div class="touch-box">
-                <p>Un message doux, rien que pour toi Ania 🤍</p>
-                <div class="gift" id="open">🌸</div>
-                <div class="tap">Touche ici</div>
-            </div>
+    <div class="screen hidden" id="screen2">
+      <div class="card">
+        <div class="card-top">
+          <span class="pill">Celebration</span>
+          <span class="pill">Aid el-Fitr</span>
         </div>
 
-        <!-- PAGE 2 -->
-        <div class="screen hidden" id="screen2">
-            <div class="card">
-                <h1>Joyeux Anniversaire 🌷</h1>
-                <h2>Pour Ania</h2>
-
-                <div class="message">
-                    En ce jour lumineux,
-                    je te souhaite un cœur rempli de joie,
-                    une âme portée par une belle énergie
-                    et des couleurs d’espoir 🤍<br><br>
-
-                    Malgré tout ce que tu as traversé,
-                    tu gardes en toi une force précieuse,
-                    un cœur capable d’aimer,
-                    de se relever et de sourire à nouveau 🌸✨<br><br>
-
-                    Que cette nouvelle année soit
-                    un nouveau départ,
-                    fait de petits bonheurs quotidiens,
-                    de rêves qui renaissent
-                    et de lumière dans chacun de tes pas 🌷<br><br>
-
-                    Avance avec confiance,
-                    ouvre ton cœur à la vie,
-                    et laisse le bonheur te rejoindre,
-                    car tu mérites tout ce qu’il y a de beau 💖
-                </div>
-
-                <div class="date" id="date"></div>
-                <div class="symbol">🕊️</div>
-            </div>
+        <div class="crescent-wrap">
+          <div class="crescent"></div>
+          <div class="star star-one">&#10022;</div>
+          <div class="star star-two">&#10022;</div>
         </div>
 
-        <!-- MUSIQUE (optionnelle) -->
-        <audio id="music" loop>
-            <source src="birthday-2.mp3" type="audio/mpeg">
-        </audio>
+        <h2>Eid Mubarak</h2>
+        <h3>Que cette fete soit remplie de paix, de lumiere et de joie.</h3>
 
-        <canvas id="confetti"></canvas>
+        <div class="message">
+          
+          Que l'Aid el-Fitr apporte a ton coeur la serenite, a ta maison la benediction et a ta famille des instants precieux a partager.<br /><br />
+          Apres le mois du Ramadan, que cette journee soit un souffle de gratitude, de generosite et d'espoir renouvele.<br /><br />
+          Je te souhaite une fete elegante, douce et lumineuse, entouree de ceux que tu aimes.<br /><br />
+          Aid Moubarak Sa'id.
+        </div>
 
-        <script src="script.js"></script>
+        <div class="controls">
+          <button class="audio-toggle" id="audioToggle" type="button">Pause la musique</button>
+        </div>
 
-    </body>
+        <div class="date" id="date"></div>
+      </div>
+    </div>
+
+    <audio id="music" loop>
+      <source src="eidunsaeed.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script src="script.js"></script>
+  </body>
 </html>
